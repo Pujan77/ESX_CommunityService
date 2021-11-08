@@ -1,10 +1,11 @@
 # ESX_CommunityService
-community service converted from esx to qbus framework /n
+community service converted from esx to qbus framework 
 
-todo: /n
-copy the ESX_CommunityService to your resource /n
-add these lines to qb-policejob/server/main.lua /n
+# todo: 
+-copy the ESX_CommunityService to your resource 
+-add these lines to qb-policejob/server/main.lua
 
+-- Addition
 QBCore.Commands.Add("communityserv", "Grant community service", {{name = "id", help = "ID of a person"}, {name = "count", help = "Count of service"}}, true, function(source, args)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -18,6 +19,8 @@ QBCore.Commands.Add("communityserv", "Grant community service", {{name = "id", h
         TriggerClientEvent('QBCore:Notify', src, "You must be a Police!", "error")
     end
 end)
+
+--addition 2
 QBCore.Commands.Add("endcommserv", "cancel community service", {{name = "id", help = "ID of a person"}}, true, function(source, args)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -33,11 +36,13 @@ QBCore.Commands.Add("endcommserv", "cancel community service", {{name = "id", he
         TriggerClientEvent('QBCore:Notify', src, "You must be a Police!", "error")
     end
 end)
-
+--step 3
 start resource 
 good to go
 
-usage: 
+
+
+# usage: 
 /comserv id time (to give community service as admin)
 /endcomserv id ( to end community service as admin)
 /communityserv id time (as police)
