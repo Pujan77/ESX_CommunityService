@@ -1,9 +1,9 @@
 # ESX_CommunityService
-community service converted from esx to qbus framework
+community service converted from esx to qbus framework /n
 
-todo: 
-copy the ESX_CommunityService to your resource
-add these lines to qb-policejob/server/main.lua
+todo: /n
+copy the ESX_CommunityService to your resource /n
+add these lines to qb-policejob/server/main.lua /n
 
 QBCore.Commands.Add("communityserv", "Grant community service", {{name = "id", help = "ID of a person"}, {name = "count", help = "Count of service"}}, true, function(source, args)
     local src = source
