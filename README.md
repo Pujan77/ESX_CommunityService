@@ -4,9 +4,10 @@ community service converted from esx to qbus framework
 # todo: 
 1. copy the ESX_CommunityService to your resource 
 
-2. dd these lines to qb-policejob/server/main.lua
+2. add these lines to qb-policejob/server/main.lua
 
 # Addition
+```lua
 QBCore.Commands.Add("communityserv", "Grant community service", {{name = "id", help = "ID of a person"}, {name = "count", help = "Count of service"}}, true, function(source, args)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -37,9 +38,11 @@ QBCore.Commands.Add("endcommserv", "cancel community service", {{name = "id", he
         TriggerClientEvent('QBCore:Notify', src, "You must be a Police!", "error")
     end
 end)
+```
 # step 3
-3. start resource 
-4. good to go
+3. Import `esx_communityservice.sql` in your database
+4. start resource 
+5. good to go
 
 
 
